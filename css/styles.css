@@ -1,0 +1,234 @@
+:root {
+  --anim-fast: 300ms ease;
+  --anim-slow: 600ms ease;
+}
+
+body {
+  font-family: sans-serif;
+  color: #2f2e2e;
+}
+
+/* reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* common styles */
+.container {
+  /* outline: 2px solid red; */
+  /* outline-offset: -2px; */
+
+  width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/**
+  |============================
+  | Header section
+  |============================
+*/
+
+.header {
+  padding-top: 47px;
+  padding-bottom: 90px;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  font-family: "Barlow";
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 50px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 106px;
+
+  margin-right: 64px;
+}
+
+.nav-link {
+  position: relative;
+  width: calc(100% + 10px);
+  font-family: "Inter";
+  font-size: 20px;
+  line-height: 24px;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  transition: color var(--anim-fast);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #254d4d;
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #254d4d;
+  opacity: 1;
+}
+
+.nav-link.current::after {
+  opacity: 1;
+}
+
+.nav-link::after {
+  opacity: 0;
+  transition: opacity var(--anim-slow);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  opacity: 1;
+}
+
+.socials-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 300ms ease;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  background-color: lightblue;
+}
+
+.socials-icon {
+  fill: grey;
+
+  transition: fill 300ms ease;
+}
+
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: white;
+}
+
+.hero-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 15px 30px;
+
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #254d4d;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Backdrop + modal */
+/* вихідний стан елемента (A) */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  /* центрування модального вікна черех flex */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+
+  transition: opacity var(--anim-slow), visibility var(--anim-slow);
+  opacity: 1;
+  pointer-events: initial;
+  visibility: visible;
+}
+
+/* зміна стану backdrop (B) */
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  /* transform: translate(-50%, -50%); */
+
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid grey;
+}
