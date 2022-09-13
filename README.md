@@ -1,20 +1,24 @@
 # bcon-35
 
-Заняття 6:
+Заняття 7:
 
-- Властивість position: static
-- Відносне позиціонування (position: relative)
-- Властивості координат: top, left, right, bottom
-- Абсолютне позиціонування (position: absolute)
-- Фіксоване позиціонування (position: fixed)
-- Липке позиціонування (position: sticky)
-- Властивість z-index
-- Властивість overflow
+- Тег form
+- Тег label
+- Тег input
+- Атрибути placeholder, checked, name
+- Атрибут type тега input і його значення (email, password, radio, checkbox, number, tel, range,
+  date)
+- Тег textarea
+- Теги select та optgroup
+- Тег datalist
+- Тег fieldset и <div role="group">
 
-- Переходи
-- 2D-трансформації
-- Перспектива та 3D-трансформації
-- Анімація
+- Оформлення стану елементів форми
+- Псевдокласи стану: valid/invalid, required/optional, checked, disabled/enabled,
+  in-range/out-of-range
+- Псевдоелемент ::placeholder і псевдоклас :placeholder-shown
+- Комбінування псевдокласів
+- Псевдоклас :focus-within
 
 ---
 
