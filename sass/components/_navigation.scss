@@ -1,0 +1,97 @@
+/* Site nav */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts .item + .item {
+  margin-left: 50px;
+}
+
+.site-nav .link,
+.contacts .contact {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--primary-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.site-nav .link.current {
+  position: relative;
+  color: var(--accent-color);
+}
+
+.link.current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+
+.contacts .contact {
+  display: flex;
+  align-items: center;
+
+  color: var(--text-color);
+
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.contact > .icon.envelope {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  padding: 0;
+  fill: currentColor;
+}
+
+.contact > .icon.smartphone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  padding: 0;
+  fill: currentColor;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.contact:hover,
+.contact:focus {
+  color: var(--accent-color);
+}

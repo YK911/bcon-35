@@ -1,0 +1,40 @@
+/* Features */
+.features {
+  // @extend %section;
+
+  @include section(94px, 0);
+}
+
+.features__list {
+  @include card-set('container', 4);
+}
+
+.features__item {
+  @include card-set('item', 4);
+}
+
+.features__thumb {
+  width: 270px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+.features__icon {
+  display: block;
+}
+
+.features__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.features__text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--text-color);
+}

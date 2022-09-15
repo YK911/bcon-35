@@ -1,37 +1,29 @@
-/* ======== Global Reset ======= */
-ul,
-ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+// utils styles
+@import './utils/vars';
+@import './utils/visually-hidden';
+@import './utils/placeholders';
+@import './utils/mixins';
 
-a {
-  text-decoration: none;
-}
+// base styles
+@import './base/common';
+@import './base/reset';
+@import './base/container';
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
+// components styles
+@import './components/logo';
+@import './components/navigation';
+@import './components/buttons';
+@import './components/modal';
+@import './components/rigistration-form';
+@import './components/subscription-form';
+@import './components/socials';
 
-img,
-svg {
-  display: block;
-}
-
-/* ============================= */
-
-/* ======== Global ======= */
-body {
-  font-family: var(--font-main);
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--main-color);
-}
+// layouts styles
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/features';
+@import './layouts/works';
+@import './layouts/team';
+@import './layouts/clients';
+@import './layouts/footer';
+@import './layouts/portfolio';
