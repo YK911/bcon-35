@@ -1,0 +1,19 @@
+body {
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-title {
+  margin-bottom: 50px;
+  color: var(--primary-text-color);
+
+  // font-weight: 700;
+  // font-size: 36px;
+  // line-height: 1.17;
+
+  @include fonts(null, 36px, 42px);
+
+  text-align: center;
+}
