@@ -1,6 +1,6 @@
 @import './decimal';
 
-@mixin section($pt: 94px, $pb: 94px) {
+@mixin section($pt: 60px, $pb: 60px) {
   padding-top: $pt;
   padding-bottom: $pb;
 }
