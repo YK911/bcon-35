@@ -4,13 +4,17 @@
   align-items: center;
 }
 
-.main-nav {
-  display: flex;
-}
-
 .site-nav {
   display: flex;
-  margin-left: 93px;
+  margin-left: 87px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 
 .site-nav .item + .item {
@@ -19,26 +23,46 @@
 
 .contacts {
   display: flex;
+  flex-direction: column;
   margin-left: auto;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
-.contacts .item + .item {
-  margin-left: 50px;
+.contacts .item {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .site-nav .link,
 .contacts .contact {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  color: var(--primary-text-color);
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  color: var(--primary-text-color);
 
   transition-property: color;
   transition-duration: var(--transition-duration);
@@ -68,25 +92,29 @@
 
   color: var(--text-color);
 
-  transition-property: color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: 12px;
+  }
+}
+
+.contact > .icon.envelope,
+.contact > .icon.smartphone {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .contact > .icon.envelope {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  padding: 0;
-  fill: currentColor;
+  @media screen and (min-width: 1200px) {
+    width: 16px;
+    height: 12px;
+  }
 }
 
 .contact > .icon.smartphone {
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  padding: 0;
-  fill: currentColor;
+  @media screen and (min-width: 1200px) {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 .site-nav .link:hover,
