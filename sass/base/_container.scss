@@ -1,7 +1,39 @@
 .container {
-  width: 1200px;
+  // breakpoints
+  // 480px - mobile breakpoint
+  // 768px - tablet breakpoint
+  // 1200px - desktop breakpoint
+
+  /**
+    |============================
+    | mobile screen
+    |============================
+  */
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+
+  /**
+    |============================
+    | tablet screen
+    |============================
+  */
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  /**
+    |============================
+    | desktop screen
+    |============================
+  */
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
 }

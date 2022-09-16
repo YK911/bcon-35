@@ -2,22 +2,67 @@
 .features {
   // @extend %section;
 
-  @include section(94px, 0);
+  // @include section;
+
+  // @media screen and(min-width: 1200px) {
+  //   @include section(94px, 94px);
+  // }
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .features__list {
-  @include card-set('container', 4);
+  // display: flex;
+  // flex-wrap: wrap;
+
+  // підтримується останніми сучасними браузерами (мобільні + десктопні)
+  // @supports ((gap: 30px;)) {
+  //   gap: 30px;
+  // }
+
+  // підтримка в старих браузерах
+  // @supports not((
+  //     gap: 30px;
+  // )
+  // ) {
+  //   margin: 15px;
+  // }
+}
+
+.features__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
 .features__item {
-  @include card-set('item', 4);
+  margin: 15px;
+
+  @media screen and(min-width: 768px) {
+    // flex-basis: calc((100% - 60px) / 2);
+    width: 354px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    // flex-basis: calc((100% - 120px) / 4);
+    width: 270px;
+  }
 }
 
 .features__thumb {
-  width: 270px;
-  padding: 25px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 120px;
   margin-bottom: 30px;
-  background: #f5f4fa;
+  background-color: #f5f4fa;
   border-radius: 4px;
 }
 
@@ -31,6 +76,10 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .features__text {
