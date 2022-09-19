@@ -66,7 +66,7 @@
     </header>
     <main>
       <!-- Герой -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="button" data-modal-open>Замовити послугу</button>
@@ -127,7 +127,7 @@
             </form>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- Особливості -->
       <section class="features">
         <div class="container">
@@ -186,33 +186,74 @@
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="works__list reset">
             <li class="works__item">
-              <img src="./images/img1.jpg" alt="Десктопні додатки" width="370" height="294" />
+              <img
+                srcset="./images/works/img-1@1x.jpg 1x, ./images/works/img-1@2x.jpg 2x"
+                src="./images/works/img-1@1x.jpg"
+                alt="Десктопні додатки"
+                width="370"
+                height="294"
+              />
               <h3 class="works__descr">Десктопні додатки</h3>
             </li>
             <li class="works__item">
-              <img src="./images/img2.jpg" alt="Мобільні додатки" width="370" height="294" />
+              <img
+                srcset="./images/works/img-2@1x.jpg 1x, ./images/works/img-2@2x.jpg 2x"
+                src="./images/works/img-2@1x.jpg"
+                alt="Мобільні додатки"
+                width="370"
+                height="294"
+              />
               <h3 class="works__descr">Мобільні додатки</h3>
             </li>
             <li class="works__item">
-              <img src="./images/img3.jpg" alt="Дизайнерські рішення" width="370" height="294" />
+              <img
+                srcset="./images/works/img-3@1x.jpg 1x, ./images/works/img-3@2x.jpg 2x"
+                src="./images/works/img-3@1x.jpg"
+                alt="Дизайнерські рішення"
+                width="370"
+                height="294"
+              />
               <h3 class="works__descr">Дизайнерські рішення</h3>
             </li>
           </ul>
         </div>
       </section>
       <!-- Наша команда -->
-      <!-- <section class="team">
+      <section class="team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team__list reset">
             <li class="team__item">
+              <!-- <img
+                class="team__photo"
+                srcset="
+                  ./images/team/team-1_270.jpg 270w,
+                  ./images/team/team-1_354.jpg 354w,
+                  ./images/team/team-1_450.jpg 450w,
+                  ./images/team/team-1_540.jpg 540w,
+                  ./images/team/team-1_708.jpg 708w,
+                  ./images/team/team-1_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team/team-1_450.jpg"
+                alt="фото Ігора"
+              /> -->
               <img
                 class="team__photo"
-                v
-                src="./images/team1.jpg"
+                srcset="
+                  ./images/team/team-1_270.jpg 270w,
+                  ./images/team/team-1_354.jpg 354w,
+                  ./images/team/team-1_450.jpg 450w,
+                  ./images/team/team-1_540.jpg 540w,
+                  ./images/team/team-1_708.jpg 708w,
+                  ./images/team/team-1_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw"
+                src="./images/team/team-1_450.jpg"
                 alt="фото Ігора"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
+                loading="lazy"
               />
               <div class="team__descr">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
@@ -252,10 +293,20 @@
             <li class="team__item">
               <img
                 class="team__photo"
-                src="./images/team2.jpg"
+                srcset="
+                  ./images/team/team-2_270.jpg 270w,
+                  ./images/team/team-2_354.jpg 354w,
+                  ./images/team/team-2_450.jpg 450w,
+                  ./images/team/team-2_540.jpg 540w,
+                  ./images/team/team-2_708.jpg 708w,
+                  ./images/team/team-2_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw"
+                src="./images/team/team-2.jpg"
                 alt="фото Ольги"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
+                loading="lazy"
               />
               <div class="team__descr">
                 <h3 class="team__name">Ольга Рєпіна</h3>
@@ -295,10 +346,20 @@
             <li class="team__item">
               <img
                 class="team__photo"
-                src="./images/team3.jpg"
+                srcset="
+                  ./images/team/team-3_270.jpg 270w,
+                  ./images/team/team-3_354.jpg 354w,
+                  ./images/team/team-3_450.jpg 450w,
+                  ./images/team/team-3_540.jpg 540w,
+                  ./images/team/team-3_708.jpg 708w,
+                  ./images/team/team-3_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw"
+                src="./images/team/team-3_450.jpg"
                 alt="фото Миколи"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
+                loading="lazy"
               />
               <div class="team__descr">
                 <h3 class="team__name">Микола Тарасов</h3>
@@ -338,10 +399,20 @@
             <li class="team__item">
               <img
                 class="team__photo"
-                src="./images/team4.jpg"
+                srcset="
+                  ./images/team/team-4_270.jpg 270w,
+                  ./images/team/team-4_354.jpg 354w,
+                  ./images/team/team-4_450.jpg 450w,
+                  ./images/team/team-4_540.jpg 540w,
+                  ./images/team/team-4_708.jpg 708w,
+                  ./images/team/team-4_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw"
+                src="./images/team/team-4_450.jpg"
                 alt="фото Михайла"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
+                loading="lazy"
               />
               <div class="team__descr">
                 <h3 class="team__name">Михайло Єрмаков</h3>
@@ -380,7 +451,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Постійні клієнти -->
       <!-- <section class="clients">
         <div class="container">
